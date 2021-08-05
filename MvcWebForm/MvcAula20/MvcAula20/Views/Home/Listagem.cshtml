@@ -1,0 +1,27 @@
+﻿@model List<MvcAula20.Models.Carro> 
+<a href="Index">Home</a><br />
+<hr />
+<h2>Listagem</h2>
+<hr />
+<table style="border: 1px solid #a05300; margin: 20px auto 10px; width: 65%; border-collapse: collapse;">
+    <thead style="background: #e8861f; color: black; text-transform: uppercase; height: 40px;">
+        <tr style="color: indigo; text-align: left; padding-left: 15px;">
+            <th style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">Id</th>
+            <th style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">Carro</th>
+            <th style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">Modelo</th>
+            <th style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr style="color: indigo; text-align: left; padding-left: 15px; ">
+            <td style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">@item.Id</td>
+            <td style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">@item.Carros</td>
+            <td style="padding-left: 15px; color: #000000; border: 1px solid #a05300;">@item.Modelo</td>
+            <td><a href="/Home/Cadastro/@item.Id">Editar</a><a href="/Home/Excluir/@item.Id">Excluir</a></td>
+        </tr>
+        }
+
+    </tbody>
+</table>
